@@ -1,4 +1,4 @@
-package ru.mvgrebenyuk.hiberOne;
+package ru.samd82.hiberOne;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

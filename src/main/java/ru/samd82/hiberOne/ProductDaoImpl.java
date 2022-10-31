@@ -1,68 +1,68 @@
-package ru.mvgrebenyuk.hiberOne;
+package ru.samd82.hiberOne;
 
 import org.hibernate.Session;
 
 import java.util.List;
 
-public class UserDaoImpl implements UserDao{
+public class ProductDaoImpl implements ProductDao {
 
     private SessionFactoryUtils sessionFactoryUtils;
 
-    public UserDaoImpl(SessionFactoryUtils sessionFactoryUtils){
+    public ProductDaoImpl(SessionFactoryUtils sessionFactoryUtils){
         this.sessionFactoryUtils = sessionFactoryUtils;
     }
 
     @Override
-    public User findById(Long id) {
+    public Product findById(Long id) {
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            User user = session.get(User.class, id);
+            Product product = session.get(Product.class, id);
             session.getTransaction().commit();
-            return user;
+            return product;
         }
     }
 
     @Override
-    public List<User> findAll() {
+    public List<Product> findAll() {
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            List<User> users = session.createQuery("select u from User u").getResultList();
+            List<Product> products = session.createQuery("SELECT p FROM products p").getResultList();
             session.getTransaction().commit();
-            return users;
+            return products;
         }
     }
 
     @Override
-    public User findByName(String name) {
+    public Product findByTitle(String title) {
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            User users = session.createQuery("select u from User u where u.name = :name", User.class)
-                    .setParameter("name", name)
+            Product products = session.createQuery("select u from products u where u.title = :title", Product.class)
+                    .setParameter("title", title)
                     .getSingleResult();
             session.getTransaction().commit();
-            return users;
+            return products;
         }
     }
 
     @Override
-    public void save(User user) {
+    public void save(Product product) {
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            session.saveOrUpdate(user);
+            session.saveOrUpdate(product);
             session.getTransaction().commit();
         }
     }
 
     @Override
-    public void update(Long id, String name) {
+    public void update(Long id, String title) {
         //            session.createQuery("update User u set u.name :name where u.id = :id")
         //                    .setParameter("name", name)
         //                    .setParameter("id", id)
         //                    .executeUpdate();
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            User user = session.get(User.class, id);
-            user.setName(name);
+            Product product = session.get(Product.class, id);
+            product.setTitle(title);
             session.getTransaction().commit();
         }
     }
@@ -71,16 +71,16 @@ public class UserDaoImpl implements UserDao{
     public void testCache() {
         try (Session session = sessionFactoryUtils.getSession()) {
             session.beginTransaction();
-            session.get(User.class, 1L);
-            session.get(User.class, 1L);
-            session.get(User.class, 1L);
+            session.get(Product.class, 1L);
+            session.get(Product.class, 1L);
+            session.get(Product.class, 1L);
             session.getTransaction().commit();
         }
         try (Session session = sessionFactoryUtils.getSession()) {
             session.beginTransaction();
-            session.get(User.class, 1L);
-            session.get(User.class, 1L);
-            session.get(User.class, 1L);
+            session.get(Product.class, 1L);
+            session.get(Product.class, 1L);
+            session.get(Product.class, 1L);
             session.getTransaction().commit();
         }
     }

@@ -1,4 +1,4 @@
-package ru.mvgrebenyuk.hiberOne;
+package ru.samd82.hiberOne;
 
 public class Main {
 
@@ -6,8 +6,8 @@ public class Main {
         SessionFactoryUtils sessionFactoryUtils = new SessionFactoryUtils();
         sessionFactoryUtils.init();
             try {
-                UserDao userDao = new UserDaoImpl(sessionFactoryUtils);
-                userDao.testCache();
+                ProductDao productDao = new ProductDaoImpl(sessionFactoryUtils);
+                System.out.println(productDao.findAll());
             } catch (Exception e){
                 e.printStackTrace();
             } finally {
