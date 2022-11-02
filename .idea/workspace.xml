@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad7c3b01-ce5e-4a7b-9c92-cbbe95bfd878" name="Changes" comment="ДЗ 5 Не работают запросы, в которых используется session.createQuery. Пишет ошибку products is not mapped. Хотя всё делалось по лекции.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ad7c3b01-ce5e-4a7b-9c92-cbbe95bfd878" name="Changes" comment="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,13 +51,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "F:/Java/ru.samd82.hibernateOne"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Java\ru.samd82.hibernateOne\src\main\java" />
@@ -119,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667234376561</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы">
+      <created>1667386700447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667386700447</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,10 +133,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="StartCommit" />
     <MESSAGE value="ДЗ 5 Не работают запросы, в которых используется session.createQuery. Пишет ошибку products is not mapped. Хотя всё делалось по лекции." />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ 5 Не работают запросы, в которых используется session.createQuery. Пишет ошибку products is not mapped. Хотя всё делалось по лекции." />
+    <MESSAGE value="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы" />
   </component>
 </project>
