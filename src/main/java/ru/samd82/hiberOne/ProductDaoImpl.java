@@ -26,7 +26,7 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> findAll() {
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            List<Product> products = session.createQuery("SELECT p FROM products p").getResultList();
+            List<Product> products = session.createQuery("SELECT p FROM Product p").getResultList();
             session.getTransaction().commit();
             return products;
         }
@@ -36,7 +36,7 @@ public class ProductDaoImpl implements ProductDao {
     public Product findByTitle(String title) {
         try (Session session = sessionFactoryUtils.getSession()){
             session.beginTransaction();
-            Product products = session.createQuery("select u from products u where u.title = :title", Product.class)
+            Product products = session.createQuery("select u from Product u where u.title = :title", Product.class)
                     .setParameter("title", title)
                     .getSingleResult();
             session.getTransaction().commit();

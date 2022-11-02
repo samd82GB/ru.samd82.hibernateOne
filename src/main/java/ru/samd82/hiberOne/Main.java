@@ -7,7 +7,7 @@ public class Main {
         sessionFactoryUtils.init();
             try {
                 ProductDao productDao = new ProductDaoImpl(sessionFactoryUtils);
-                System.out.println(productDao.findAll());
+                System.out.println(productDao.findByTitle("Fax"));
             } catch (Exception e){
                 e.printStackTrace();
             } finally {
