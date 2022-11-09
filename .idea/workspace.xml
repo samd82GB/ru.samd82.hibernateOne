@@ -4,16 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad7c3b01-ce5e-4a7b-9c92-cbbe95bfd878" name="Changes" comment="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы" />
+    <list default="true" id="ad7c3b01-ce5e-4a7b-9c92-cbbe95bfd878" name="Changes" comment="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/samd82/hiberOne/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/samd82/hiberOne/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/samd82/hiberOne/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/samd82/hiberOne/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="lsssn05" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +50,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
@@ -46,7 +60,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Gj5s1plt7pBXm6zbzhS7mGMq9e" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +77,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Java\ru.samd82.hibernateOne\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.samd82.hiberOne" />
     </key>
   </component>
   <component name="RunManager">
@@ -120,8 +139,18 @@
       <option name="project" value="LOCAL" />
       <updated>1667386700447</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Исправлена ошибка not mapped. В запросах JPQL надо указывать имя класса сущности, а не таблицы">
+      <created>1667390084267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667390084267</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

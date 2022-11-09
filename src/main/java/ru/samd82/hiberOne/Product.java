@@ -1,6 +1,7 @@
 package ru.samd82.hiberOne;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -16,6 +17,13 @@ public class Product {
 
     @Column(name = "price")
     private int price;
+
+
+    @ManyToMany
+    @JoinTable (name = "buyers_products",
+            joinColumns = @JoinColumn (name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "buyer_id"))
+    private List<Buyer> buyers;
 
     public Product(String max, int i) {
         this.title = max;
@@ -59,6 +67,7 @@ public class Product {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", price=" + price +
+//                ", buyers=" + buyers +
                 '}';
     }
 }
